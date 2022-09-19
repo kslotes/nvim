@@ -7,7 +7,7 @@ vim.o.relativenumber = true
 vim.o.scrolloff = 8
 vim.o.numberwidth = 4
 -- vim.o.signcolumn = 'yes'
-vim.o.guicursor = ""
+vim.o.guicursor = line
 
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
