@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\nitsu\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1736781742\\share\\lua\\5.1\\?.lua;C:\\Users\\nitsu\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1736781742\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\nitsu\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1736781742\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\nitsu\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1736781742\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\nitsu\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1736781742\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/home/nitsu/.cache/nvim/packer_hererocks/2.1.1760617492/share/lua/5.1/?.lua;/home/nitsu/.cache/nvim/packer_hererocks/2.1.1760617492/share/lua/5.1/?/init.lua;/home/nitsu/.cache/nvim/packer_hererocks/2.1.1760617492/lib/luarocks/rocks-5.1/?.lua;/home/nitsu/.cache/nvim/packer_hererocks/2.1.1760617492/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nitsu/.cache/nvim/packer_hererocks/2.1.1760617492/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -76,112 +76,112 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["cmp-buffer"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-cmdline"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-cmdline",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   ["cmp-vsnip"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["copilot.vim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
   ["fidget.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fidget.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
   harpoon = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["onedark.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ripgrep = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ripgrep",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-fzf-native.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   undotree = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-vsnip"] = {
     loaded = true,
-    path = "C:\\Users\\nitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
+    path = "/home/nitsu/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
