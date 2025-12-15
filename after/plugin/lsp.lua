@@ -1,25 +1,21 @@
-
-
-
 local cmp = require'cmp'
 cmp.setup({
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+            vim.fn["vsnip#anonymous"](args.body)
         end,
     },
-    window = {
-    },
+    window = {},
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'vsnip' }, -- For vsnip users.
+        { name = 'vsnip' },
     }, {
         { name = 'buffer' },
     })
@@ -42,18 +38,34 @@ cmp.setup.cmdline(':', {
     matching = { disallow_symbol_nonprefix_matching = false }
 })
 
+-- Configuración de capabilities para LSP
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+-- Handlers
 local handlers = {
     function(server_name)
-        require("lspconfig")[server_name].setup{}
+        require("lspconfig")[server_name].setup{
+            capabilities = capabilities
+        }
     end,
-    ["lua_ls"] = function ()
-        local lspconfig = require("lspconfig")
-        lspconfig.lua_ls.setup {
+    ["lua_ls"] = function()
+        require("lspconfig").lua_ls.setup {
+            capabilities = capabilities,
             settings = {
                 Lua = {
+                    runtime = {
+                        version = 'LuaJIT',
+                    },
                     diagnostics = {
-                        globals = { "vim" }
-                    }
+                        globals = { 'vim' },
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                        checkThirdParty = false,
+                    },
+                    telemetry = {
+                        enable = false,
+                    },
                 }
             }
         }
@@ -63,13 +75,10 @@ local handlers = {
 require('fidget').setup({})
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensured_installed = {
+    ensure_installed = {
         "tailwindcss",
-        "tsserver",
+        "ts_ls",
         "lua_ls",
-        "gopls",
     },
     handlers = handlers
 })
-
-

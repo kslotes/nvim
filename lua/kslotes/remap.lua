@@ -31,6 +31,7 @@ vim.keymap.set("n", "gl", "<cmd>diffget //3<CR>")
 vim.keymap.set("n", "<leader>n", "<cmd>lprev<CR>zz")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function (e)
@@ -51,3 +52,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end, opts)
     end
 })
+
+vim.keymap.set("n", "<leader>co", function()
+    vim.cmd("Copilot disable")
+    print("Copilot disabled")
+end)
+vim.keymap.set("n", "<leader>cp", function()
+    vim.cmd("Copilot enable")
+    print("Copilot enabled")
+end)
