@@ -3,7 +3,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
   use('BurntSushi/ripgrep')
   use {
       'nvim-telescope/telescope.nvim',
@@ -23,7 +26,6 @@ return require('packer').startup(function(use)
       "williamboman/mason-lspconfig.nvim",
   }
 
-  use('neovim/nvim-lspconfig')
   use('hrsh7th/cmp-nvim-lsp')
   use('hrsh7th/cmp-buffer')
   use('hrsh7th/cmp-path')
@@ -35,4 +37,5 @@ return require('packer').startup(function(use)
 
   use('github/copilot.vim')
   use{'j-hui/fidget.nvim', tag = 'v1.0.0'}
+  use('maxmellon/vim-jsx-pretty')
 end)
